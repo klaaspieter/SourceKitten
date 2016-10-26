@@ -205,6 +205,17 @@ extension NSString {
     }
 
     /**
+     Returns UTF8 offset from UTF16 offset.
+
+     - parameter location: UTF16-based offset of string.
+
+     - returns: UTF8 based offset of string.
+     */
+    public func byteOffset(fromLocation location: Int) -> Int {
+        return cacheContainer.byteOffset(fromLocation: location)
+    }
+
+    /**
      Returns UTF16 offset from UTF8 offset.
 
      - parameter byteOffset: UTF8-based offset of string.
